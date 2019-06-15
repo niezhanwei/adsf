@@ -77,20 +77,21 @@
                 // $('input.password').val(backData.data.password);
 
                 // 上面简写为
-                for(var key in backData.data){
-                    $('input.'+key).val(backData.data[key]); 
-               
-                 
+                for (var key in backData.data) {
+                    $('input.' + key).val(backData.data[key]);
+
+
                 }
-
-
-                $('img.user_pic').attr('src',backData.data.user_pic);
-
-
+                $('img.user_pic').attr('src', backData.data.user_pic);
             }
         })
 
-
+        // 图片预览
+        $('#exampleInputFile').on('change', function () {
+            var icon = this.files[0];
+            var url = URL.createObjectURL(icon);
+            $('img.user_pic').attr('src', url);
+        });
 
 
     </script>
