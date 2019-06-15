@@ -159,20 +159,20 @@
     </script>
 
     <script>
-    // 获取用户信息
-    $.ajax({
-        type:'get',
-        url:'http://localhost:8000/admin/getuser',
-        success:function(backData){
-            console.log(backData);
-       
+        // 获取用户信息
+        $.ajax({
+            type: 'get',
+            url: 'http://localhost:8000/admin/getuser',
+            success: function (backData) {
+                console.log(backData);
 
-$('img#tupianid').attr('src',backData.data.user_pic);
-$('.user_info span').html('欢迎&nbsp;&nbsp;'+backData.data.nickname);
 
-        }
-    })
-    
+                $('img#tupianid').attr('src', backData.data.user_pic);
+                $('.user_info span').html('欢迎&nbsp;&nbsp;' + backData.data.nickname);
+
+            }
+        })
+
     </script>
 </body>
 
